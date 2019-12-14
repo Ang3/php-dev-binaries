@@ -15,7 +15,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require ang3/php-dev-binaries --dev
+$ composer require --dev ang3/php-dev-binaries
 ```
 
 Usage
