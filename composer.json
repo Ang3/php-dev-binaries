@@ -1,0 +1,26 @@
+{
+  "name": "ang3/php-dev-binaries",
+  "type": "binary",
+  "description": "PHP project binaries for developpers",
+  "keywords": ["php", "dev", "bin", "linter", "check", "code", "phpstan", "php-cs-fixer"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joanis ROUANET",
+      "email": "joanis.ang3@gmail.com",
+      "homepage": "https://github.com/Ang3"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "phpstan/phpstan": "^0.11.5",
+    "friendsofphp/php-cs-fixer": "^2.14"
+  },
+  "bin": [
+    "bin/check_code.sh",
+    "bin/fix_code.sh"
+  ],
+  "config": {
+    "sort-packages": true
+  }
+}
