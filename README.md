@@ -3,6 +3,11 @@ PHP development binaries
 
 This package provides useful binaries so as to check the code of your project. It uses [phpstan/phpstan](https://github.com/phpstan/phpstan) for code analysis and [friendsofphp/php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to fix code.
 
+Requirements
+============
+
+- Linux
+
 Installation
 ============
 
