@@ -16,7 +16,7 @@ $ composer require ang3/php-dev-binaries --dev
 Usage
 =====
 
-# Check code
+## Check code
 
 In your project directory:
 
@@ -27,7 +27,7 @@ $ vendor/bin/check_code.sh <sources_dir> <phpstan_level>
 - ```source_dir``` (required) is the relative path of the sources folder to analyze [default: ```src```]
 - ```phpstan_level``` (optional) the level (lower: 1 - Higher: 7) [default: ```7```]
 
-# Fix code
+## Fix code
 
 In your project directory:
 
