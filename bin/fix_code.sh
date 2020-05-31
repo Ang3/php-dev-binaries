@@ -1,8 +1,10 @@
 #!/bin/sh
 
-echo "\033[33;1m"
-echo "Fixing code..."
-echo "\033[0m"
+# shellcheck disable=SC2039
+echo -e "\033[33;1m"
+echo -e "Fixing code"
+echo -e "===========\033[0m"
+echo
 
 if [ -z "$1" ]
 then
