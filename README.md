@@ -5,11 +5,6 @@ PHP development binaries
 
 This package provides useful binaries so as to check the code of your project. It uses [phpstan/phpstan](https://github.com/phpstan/phpstan) for code analysis and [friendsofphp/php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to fix code.
 
-Requirements
-============
-
-- Linux
-
 Installation
 ============
 
@@ -30,7 +25,7 @@ Usage
 In your project directory:
 
 ```shell
-$ check_code.sh <env> <phpstan_level>
+$ dev_check_code.sh <env> <phpstan_level>
 ```
 
 - ```env``` is the relative path of the sources folder to analyze [default: ```src```]
@@ -55,7 +50,7 @@ then the config file must be named following the naming convention: ```phpstan.<
 In your project directory:
 
 ```shell
-$ fix_code.sh <sources_dir>
+$ dev_fix_code.sh <sources_dir>
 ```
 
 - ```sources_dir``` is the relative path of the sources folder to analyze [default: ```src```]

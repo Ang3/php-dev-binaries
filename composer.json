@@ -19,8 +19,8 @@
     "phpstan/phpstan-symfony": ">=0.9"
   },
   "bin": [
-    "bin/check_code.sh",
-    "bin/fix_code.sh"
+    "bin/dev_check_code.sh",
+    "bin/dev_fix_code.sh"
   ],
   "config": {
     "sort-packages": true
