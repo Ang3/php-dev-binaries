@@ -1,6 +1,8 @@
 #!/bin/sh
 
 # shellcheck disable=SC2039
+SCRIPT_DIR="$( cd "$( dirname -- "$0" )" && pwd )"
+
 echo -e "\033[33;1m"
 echo -e "Fixing code"
 echo -e "===========\033[0m"
@@ -17,4 +19,4 @@ else
 	echo 
 fi
 
-./vendor/bin/php-cs-fixer -v fix $directory --rules='{"@Symfony": true}'
+$SCRIPT_DIR/php-cs-fixer -v fix $directory --rules='{"@Symfony": true}'

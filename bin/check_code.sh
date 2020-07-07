@@ -1,6 +1,8 @@
 #!/bin/sh
 
 # shellcheck disable=SC2039
+SCRIPT_DIR="$( cd "$( dirname -- "$0" )" && pwd )"
+
 echo -e "\033[33;1m"
 echo -e "Checking code"
 echo -e "=============\033[0m"
@@ -38,4 +40,4 @@ fi
 echo "Config file:" $config_file
 echo 
 
-./vendor/bin/phpstan analyse $directory -c $config_file -l $level
+$SCRIPT_DIR/phpstan analyse $directory -c $config_file -l $level
