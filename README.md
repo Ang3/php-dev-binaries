@@ -17,8 +17,10 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require --dev ang3/php-dev-binaries
+$ composer global require ang3/php-dev-binaries
 ```
+
+/!\ Do not forget to add the composer bin folder to you environment variable ```PATH```.
 
 Usage
 =====
@@ -28,18 +30,32 @@ Usage
 In your project directory:
 
 ```shell
-$ vendor/bin/check_code.sh <sources_dir> <phpstan_level>
+$ check_code.sh <env> <phpstan_level>
 ```
 
-- ```source_dir``` (required) is the relative path of the sources folder to analyze [default: ```src```]
-- ```phpstan_level``` (optional) the level (lower: 1 - Higher: 7) [default: ```7```]
+- ```env``` is the relative path of the sources folder to analyze [default: ```src```]
+- ```phpstan_level``` the level (lower: 1 - Higher: 7) [default: ```7```]
+
+Create the file ```phpstan.neon``` at the root of your project:
+
+```neon
+parameters:
+  inferPrivatePropertyTypeFromConstructor: true
+  checkGenericClassInNonGenericObjectType: false
+  checkMissingIterableValueType: false
+  paths:
+    - %currentWorkingDirectory%/src
+```
+
+If the ```env``` is neither empty nor equal to ```src```, 
+then the config file must be named following the naming convention: ```phpstan.<env>.neon```.
 
 ## Fix code
 
 In your project directory:
 
 ```shell
-$ vendor/bin/fix_code.sh <sources_dir>
+$ fix_code.sh <sources_dir>
 ```
 
-- ```source_dir``` (required) is the relative path of the sources folder to analyze [default: ```src```]
+- ```sources_dir``` is the relative path of the sources folder to analyze [default: ```src```]

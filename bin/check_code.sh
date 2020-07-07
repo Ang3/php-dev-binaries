@@ -30,11 +30,11 @@ else
 	echo 
 fi
 
-if [ $directory = "tests" ]
+if [ $directory = "src" ]
 then
-    config_file='tests.phpstan.neon'
-else
     config_file='phpstan.neon'
+else
+    config_file='phpstan.'$directory'.neon'
 fi
 
 echo "Config file:" $config_file
