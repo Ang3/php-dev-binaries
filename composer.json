@@ -20,7 +20,11 @@
   },
   "bin": [
     "bin/dev_check_code.sh",
-    "bin/dev_fix_code.sh"
+    "bin/dev_fix_code.sh",
+    "bin/symfony/sf_clear_cache.sh",
+    "bin/symfony/sf_clear_doctrine_cache.sh",
+    "bin/symfony/sf_clear_logs.sh",
+    "bin/symfony/sf_reset.sh"
   ],
   "config": {
     "sort-packages": true
