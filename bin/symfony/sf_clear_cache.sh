@@ -12,11 +12,9 @@ if [ -z "$1" ]
 then
 	environment='dev'
 	echo "No environment specified (default: dev)."
-	echo 
 else
 	environment=$1
 	echo "Environment:" $1
-	echo 
 fi
 
 rm -rf var/cache/*
