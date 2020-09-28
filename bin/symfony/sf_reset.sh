@@ -40,5 +40,10 @@ then
 fi
 
 php bin/console d:m:m --no-interaction --env=$ENV
+echo
 sh $SCRIPTPATH/sf_clear_logs.sh
+echo
 sh $SCRIPTPATH/sf_clear_cache.sh $ENV
+echo
+
+echo -e "\033[32;1mApplication has been reset successfully.\033[0m"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\033[33;1mClearing app cache and resetting permissions...\033[0m"
+echo -e "\033[33;1mClearing app cache...\033[0m"
 
 if [ ! -e bin/console ]
 then
@@ -20,7 +20,5 @@ else
 fi
 
 rm -rf var/cache/*
-sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var/cache
-sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var/cache
 php bin/console cache:clear --env=$environment -vv
 echo -e "\033[32;1mCache cleared successfully.\033[0m"
