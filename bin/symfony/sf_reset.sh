@@ -2,6 +2,8 @@
 
 echo -e "\033[33;1mResetting application...\033[0m"
 
+SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
 if [ ! -e bin/console ]
 then
   echo "This script must be executed in the root of a Symfony project (console file not detected)."
@@ -29,17 +31,14 @@ else
 fi
 
 php bin/console d:d:d --force --env=$ENV
+php bin/console d:d:c --env=$ENV
+
 if [ $TYPE = "full" ]
 then
   rm -rf bin/../migrations/Version*.php
-fi
-
-php bin/console d:d:c --env=$ENV
-if [ $TYPE = "full" ]
-then
   php bin/console d:m:diff
 fi
 
 php bin/console d:m:m --no-interaction --env=$ENV
-sh sf_clear_logs.sh
-sh sf_clear_cache.sh $ENV
+sh $SCRIPTPATH/sf_clear_logs.sh
+sh $SCRIPTPATH/sf_clear_cache.sh $ENV
