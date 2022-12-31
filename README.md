@@ -16,10 +16,6 @@ Summary
         - [Check code](#check-code)
         - [Fix code](#fix-code)
     - [Symfony](#symfony-development)
-        - [Clear logs](#clear-logs)
-        - [Clear cache](#clear-cache)
-        - [Clear Doctrine cache](#clear-doctrine-cache-only)
-        - [Reset application](#reset-application)
 
 Installation
 ============
@@ -73,50 +69,9 @@ In your project directory:
 $ dev_fix_code.sh <sources_dir>
 ```
 
-- ```sources_dir``` is the relative path of the sources folder to analyze [default: ```src```]
+- ```sources_dir``` is the relative path of the folder to analyze [default: ```src```]
 
+Symfony
+-------
 
-Symfony development
--------------------
-
-### Clear logs
-
-In your project directory:
-
-```shell
-$ sf_clear_logs.sh
-```
-
-### Clear cache
-
-In your project directory:
-
-```shell
-$ sf_clear_cache.sh <environment>
-```
-
-- ```environment``` is the environment to clear [default: ```dev```]
-
-### Clear doctrine cache (only)
-
-In your project directory:
-
-```shell
-$ sf_clear_doctrine_cache.sh <environment>
-```
-
-- ```environment``` is the environment to clear [default: ```dev```]
-
-### Reset application
-
-This command will delete the database, then recreate it, load Doctrine migrations and clear the cache. 
-You can force migrations resetting by passing the second argument ```full```.
-
-In your project directory:
-
-```shell
-$ sf_reset.sh <environment> [full]
-```
-
-- ```environment``` is the environment to clear [default: ```dev```]
-- ```full``` enable doctrine migrations resetting if set
+For Symfony applications, install the package [ang3/symfony-scripts](https://github.com/Ang3/symfony-scripts).

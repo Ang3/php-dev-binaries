@@ -1,7 +1,7 @@
 {
   "name": "ang3/php-dev-binaries",
   "type": "binary",
-  "description": "PHP project binaries for developpers",
+  "description": "PHP project binaries for developers",
   "keywords": ["php", "dev", "bin", "linter", "check", "code", "phpstan", "php-cs-fixer"],
   "license": "MIT",
   "authors": [
@@ -20,11 +20,7 @@
   },
   "bin": [
     "bin/dev_check_code.sh",
-    "bin/dev_fix_code.sh",
-    "bin/symfony/sf_clear_cache.sh",
-    "bin/symfony/sf_clear_doctrine_cache.sh",
-    "bin/symfony/sf_clear_logs.sh",
-    "bin/symfony/sf_reset.sh"
+    "bin/dev_fix_code.sh"
   ],
   "config": {
     "sort-packages": true
