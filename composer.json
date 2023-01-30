@@ -13,10 +13,10 @@
   ],
   "require": {
     "php": ">=7.1",
-    "friendsofphp/php-cs-fixer": ">=2.14",
-    "phpstan/phpstan": ">=0.9",
-    "phpstan/phpstan-doctrine": ">=0.9",
-    "phpstan/phpstan-symfony": ">=0.9"
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "phpstan/phpstan": "^1.0",
+    "phpstan/phpstan-doctrine": "^1.0",
+    "phpstan/phpstan-symfony": "^1.0"
   },
   "bin": [
     "bin/dev_check_code.sh",
