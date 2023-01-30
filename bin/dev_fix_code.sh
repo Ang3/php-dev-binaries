@@ -17,4 +17,4 @@ else
 	echo 
 fi
 
-php-cs-fixer -v fix $directory --rules='{"@Symfony": true}'
+php-cs-fixer -v fix $directory --config=.php-cs-fixer.php-highest.php $2
